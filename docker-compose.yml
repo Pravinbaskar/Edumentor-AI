@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    container_name: edumentor-api
+    env_file:
+      - .env
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    ports:
+      - "8000:8000"
+
+  ui:
+    image: python:3.11-slim
+    container_name: edumentor-ui
+    working_dir: /app
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    environment:
+      - BACKEND_URL=http://api:8000
+    command: >
+      sh -c "pip install --no-cache-dir -r requirements.txt streamlit &&
+             streamlit run streamlit_app.py --server.port=8501 --server.address=0.0.0.0"
+    depends_on:
+      - api
+    ports:
+      - "8501:8501"

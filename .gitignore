@@ -26,24 +26,34 @@ ENV/
 env/
 .venv
 
+# Environment variables
+.env
+.env.local
+
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
-.DS_Store
 
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Environment variables
-.env
-.env.local
+# OS
+.DS_Store
+Thumbs.db
 
 # Logs
-logs/
 *.log
+logs/
+
+# Database
+*.db
+*.sqlite
+
+# Streamlit
+.streamlit/secrets.toml
 
 # Data files (you may want to uncomment these if data is large)
 # data/vector_store/
@@ -51,10 +61,6 @@ logs/
 
 # Docker
 .dockerignore
-
-# OS
-Thumbs.db
-.DS_Store
 
 # Backup files
 *.backup
