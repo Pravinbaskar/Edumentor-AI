@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+openai>=1.14.0
+pydantic
+requests
+streamlit
+langgraph>=0.4.0
+faiss-cpu
+pypdf2
+sentence-transformers
+python-multipart
+python-dotenv
+reportlab

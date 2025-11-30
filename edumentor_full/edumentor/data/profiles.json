@@ -1,0 +1,10 @@
+{
+  "demo_user": {
+    "name": "Prasoon",
+    "age": 6,
+    "syllabus": "CBSE",
+    "proficiency": "advanced",
+    "gender": "male",
+    "grade": "1"
+  }
+}
